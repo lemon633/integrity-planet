@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>诚信挑战站 · INTEGRITY CHALLENGE</title>
+    <link rel="stylesheet" href="css/challenge.css">
+</head>
+
+<body>
+
+    <!-- 顶部导航 -->
+    <header class="challenge-navbar">
+        <a href="index.html" class="back-home">
+            ← 返回诚信星球
+        </a>
+
+        <div class="nav-logo">✦ INTEGRITY PLANET</div>
+
+        <div class="nav-label">诚信挑战站</div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="challenge-header">
+        <span class="english-title">
+            THE INTEGRITY CHALLENGE
+        </span>
+
+        <h1>诚信闯关计划</h1>
+
+        <p>
+            每一次诚实的选择，都是一次成长。
+            来接受挑战，点亮你的诚信星球吧！
+        </p>
+    </section>
+
+    <!-- 游戏主体 -->
+    <main class="challenge-main">
+
+        <!-- 游戏介绍 -->
+        <section class="challenge-intro">
+            <div class="intro-icon">🌟</div>
+
+            <h2>准备好接受挑战了吗？</h2>
+
+            <p>
+                这里有一系列关于诚信的小问题。
+                认真思考，选择你认为最合适的答案。
+            </p>
+
+            <div class="challenge-info">
+                <span>✦ 5道挑战题</span>
+                <span>✦ 每题20分</span>
+                <span>✦ 满分100分</span>
+            </div>
+
+            <button id="startBtn" class="start-btn">
+                开始挑战 →
+            </button>
+        </section>
+
+        <!-- 答题区域 -->
+        <section class="quiz-panel" id="quizPanel">
+
+            <div class="quiz-top">
+                <span id="questionNumber">第1题 / 共5题</span>
+                <span id="score">当前得分：0</span>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-tag">INTEGRITY QUIZ</span>
+
+                <h2 id="questionText">
+                    题目将在这里显示
+                </h2>
+
+                <div class="options-list" id="optionsList">
+                    <!-- JavaScript生成选项 -->
+                </div>
+
+                <div id="feedback" class="feedback"></div>
+
+                <button id="nextBtn" class="next-btn">
+                    下一题 →
+                </button>
+            </div>
+
+        </section>
+
+        <!-- 成绩结算 -->
+        <section class="result-panel" id="resultPanel">
+
+            <div class="result-icon">🏆</div>
+
+            <h2>挑战完成！</h2>
+
+            <p>你的诚信挑战成绩是</p>
+
+            <div class="final-score">
+                <strong id="finalScore">0</strong>
+                <span> / 100 分</span>
+            </div>
+
+            <h3 id="resultMessage"></h3>
+
+            <button id="restartBtn" class="restart-btn">
+                再挑战一次 ↻
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="challenge-footer">
+        <p>诚信不是一道选择题，而是一种生活态度。</p>
+        <a href="index.html">返回诚信星球首页 →</a>
+    </footer>
+
+    <script src="js/challenge.js"></script>
+
+</body>
+
+</html>

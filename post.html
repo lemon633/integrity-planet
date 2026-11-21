@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>感恩邮局 · HEART ISLAND</title>
+    <link rel="stylesheet" href="css/post.css">
+</head>
+
+<body>
+
+    <!-- 顶部导航 -->
+    <header class="post-navbar">
+        <a href="index.html" class="back-home">← 返回诚信星球</a>
+        <div class="nav-logo">✦ HEART ISLAND</div>
+        <div class="nav-label">感恩邮局</div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="post-header">
+        <span class="english-title">THE GRATITUDE POST OFFICE</span>
+        <h1>把感谢寄出去</h1>
+        <p>有些感谢，不妨认真写下来。让每一份温暖，都被好好珍藏。</p>
+    </section>
+
+    <!-- 页面主体 -->
+    <main class="post-main">
+
+        <!-- 左侧：写信区域 -->
+        <section class="write-panel">
+
+            <div class="panel-heading">
+                <span>✧ WRITE A LETTER ✧</span>
+                <h2>写下一封感恩信</h2>
+                <p>把心里的感谢，变成一段真诚的话语。</p>
+            </div>
+
+            <form id="letterForm">
+
+                <!-- 收件人 -->
+                <div class="form-group">
+                    <label for="receiver">这封信想写给谁？</label>
+                    <select id="receiver" required>
+                        <option value="">请选择收件人</option>
+                        <option value="爸爸妈妈">爸爸妈妈</option>
+                        <option value="老师">老师</option>
+                        <option value="朋友">朋友</option>
+                        <option value="同学">同学</option>
+                        <option value="其他重要的人">其他重要的人</option>
+                    </select>
+                </div>
+
+                <!-- 信件标题 -->
+                <div class="form-group">
+                    <label for="letterTitle">给这封信取个名字</label>
+                    <input type="text" id="letterTitle" placeholder="例如：想对您说声谢谢" maxlength="30" required>
+                </div>
+
+                <!-- 信件内容 -->
+                <div class="form-group">
+                    <div class="label-row">
+                        <label for="letterContent">写下你的心里话</label>
+                        <span id="wordCount">0 / 500</span>
+                    </div>
+
+                    <textarea id="letterContent" placeholder="亲爱的爸爸妈妈：
+
+谢谢你们一直以来的陪伴和支持……
+
+在这里写下你想表达的感谢吧。" maxlength="500" required></textarea>
+                </div>
+
+                <!-- 落款 -->
+                <div class="form-group">
+                    <label for="sender">写信人</label>
+                    <input type="text" id="sender" placeholder="请输入你的名字或昵称" maxlength="20" required>
+                </div>
+
+                <!-- 操作按钮 -->
+                <div class="form-actions">
+                    <button type="button" class="reset-btn" id="resetBtn">
+                        清空重写
+                    </button>
+
+                    <button type="submit" class="save-btn">
+                        保存这封信
+                        <span>✉</span>
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- 右侧：信件预览 -->
+        <section class="preview-panel">
+
+            <div class="panel-heading">
+                <span>✧ LETTER PREVIEW ✧</span>
+                <h2>你的感恩信</h2>
+                <p>每一份真诚，都值得被认真收藏。</p>
+            </div>
+
+            <!-- 信纸 -->
+            <div class="letter-paper">
+
+                <div class="paper-decoration">✿</div>
+
+                <div class="paper-top">
+                    <span>HEART ISLAND</span>
+                    <span>♡</span>
+                </div>
+
+                <div class="paper-line"></div>
+
+                <p class="preview-receiver" id="previewReceiver">
+                    亲爱的收件人：
+                </p>
+
+                <h3 id="previewTitle">一封温暖的信</h3>
+
+                <div class="preview-content" id="previewContent">
+                    这里将展示你写下的感恩内容。
+                    每一份感谢，都能让世界变得更加温暖。
+                </div>
+
+                <div class="preview-signature">
+                    <p>此致，敬意与感谢。</p>
+                    <span id="previewSender">你的朋友</span>
+                    <span id="previewDate">----年--月--日</span>
+                </div>
+
+                <div class="paper-bottom">
+                    ✦ 一份真诚，一份温暖 ✦
+                </div>
+
+            </div>
+
+            <!-- 温馨提示 -->
+            <div class="warm-reminder">
+                <span>💌</span>
+                <div>
+                    <h3>让感谢不再只是心意</h3>
+                    <p>一句感谢，一个行动，都能成为彼此珍贵的回忆。</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- 已保存的信件 -->
+    <section class="saved-section">
+
+        <div class="saved-heading">
+
+            <div>
+                <span>✧ MY LETTER COLLECTION ✧</span>
+                <h2>我的感恩信箱</h2>
+                <p>收藏那些值得珍惜的温暖瞬间。</p>
+            </div>
+
+            <div class="letter-total">
+                <strong id="letterTotal">0</strong>
+                <span>封已收藏</span>
+            </div>
+
+        </div>
+
+        <div class="letter-list" id="letterList">
+            <!-- JavaScript 动态生成信件 -->
+        </div>
+
+    </section>
+
+    <!-- 底部 -->
+    <footer class="post-footer">
+        <p>感谢让生活更温暖，真诚让彼此更靠近。</p>
+        <a href="index.html">返回诚信星球首页 →</a>
+    </footer>
+
+    <!-- 操作提示 -->
+    <div class="post-toast" id="postToast" role="status" aria-live="polite">
+        💌 信件已成功收藏！
+    </div>
+
+    <!-- 信件查看弹窗 -->
+    <div class="letter-modal" id="letterModal" aria-hidden="true">
+
+        <div class="modal-content">
+
+            <button type="button" class="modal-close" id="modalClose" aria-label="关闭">×</button>
+
+            <div class="modal-paper">
+
+                <span class="modal-label">MY PRECIOUS LETTER</span>
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalReceiver"></p>
+
+                <div class="modal-body" id="modalBody"></div>
+
+                <div class="modal-signature">
+                    <p id="modalSender"></p>
+                    <p id="modalDate"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/post.js"></script>
+
+</body>
+
+</html>

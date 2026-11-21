@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成长档案 · INTEGRITY PLANET</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+
+    <!-- 顶部导航 -->
+    <header class="profile-navbar">
+        <a href="index.html" class="back-home">← 返回诚信星球</a>
+        <div class="nav-logo">✦ INTEGRITY PLANET</div>
+        <div class="nav-label">我的成长档案</div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="profile-header">
+        <span class="english-title">MY GROWTH JOURNEY</span>
+        <h1>每一步成长，都值得被记录</h1>
+        <p>诚信不是一瞬间的选择，而是日积月累的坚持。</p>
+    </section>
+
+    <main class="profile-main">
+
+        <!-- 欢迎卡片 -->
+        <section class="welcome-card">
+            <div class="welcome-text">
+                <span class="welcome-tag">MY INTEGRITY JOURNEY</span>
+                <h2>你好，诚信星球探索者！</h2>
+                <p>在这里，回顾你的每一次认真选择，收藏每一份温暖与成长。</p>
+            </div>
+            <div class="welcome-decoration">🌱</div>
+        </section>
+
+        <!-- 数据统计 -->
+        <section class="section-block">
+            <div class="section-heading">
+                <span>✦</span>
+                <h2>我的成长数据</h2>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number" id="challengeCount">0</div>
+                    <div class="stat-title">完成挑战次数</div>
+                    <p>每一次选择都是成长</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-number" id="bestScore">0</div>
+                    <div class="stat-title">最佳挑战成绩</div>
+                    <p>满分为100分</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">💌</div>
+                    <div class="stat-number" id="letterCount">0</div>
+                    <div class="stat-title">写下的感谢信</div>
+                    <p>让感谢传递温暖</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🌟</div>
+                    <div class="stat-number" id="totalScore">0</div>
+                    <div class="stat-title">累计挑战积分</div>
+                    <p>记录每一次努力</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 荣誉徽章 -->
+        <section class="section-block">
+            <div class="section-heading">
+                <span>✦</span>
+                <h2>我的荣誉徽章</h2>
+            </div>
+
+            <div class="badge-grid">
+
+                <div class="badge-card" id="badgeStarter">
+                    <div class="badge-icon">🌱</div>
+                    <h3>初心探索者</h3>
+                    <p>完成第一次诚信挑战</p>
+                    <span class="badge-status">尚未点亮</span>
+                </div>
+
+                <div class="badge-card" id="badgePerfect">
+                    <div class="badge-icon">🏅</div>
+                    <h3>诚信小达人</h3>
+                    <p>获得一次100分成绩</p>
+                    <span class="badge-status">尚未点亮</span>
+                </div>
+
+                <div class="badge-card" id="badgeWriter">
+                    <div class="badge-icon">💌</div>
+                    <h3>温暖传递者</h3>
+                    <p>写下第一封感谢信</p>
+                    <span class="badge-status">尚未点亮</span>
+                </div>
+
+                <div class="badge-card" id="badgeMaster">
+                    <div class="badge-icon">👑</div>
+                    <h3>坚持成长者</h3>
+                    <p>累计完成5次挑战</p>
+                    <span class="badge-status">尚未点亮</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 成长寄语 -->
+        <section class="message-card">
+            <div class="message-icon">☀️</div>
+            <div>
+                <span class="message-tag">A MESSAGE FOR YOU</span>
+                <h2>属于你的成长寄语</h2>
+                <p id="growthMessage">
+                    每一次诚实的选择，都在让你成为更好的自己。
+                    继续前进吧，诚信星球的探索者！
+                </p>
+            </div>
+        </section>
+
+        <!-- 成长记录 -->
+        <section class="section-block">
+            <div class="section-heading">
+                <span>✦</span>
+                <h2>我的成长足迹</h2>
+            </div>
+
+            <div class="record-card" id="recordList">
+                <div class="empty-record">
+                    <span>📖</span>
+                    <p>暂时还没有成长记录</p>
+                    <small>完成挑战或写下感谢信后，记录就会出现在这里。</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- 操作按钮 -->
+        <section class="profile-actions">
+            <a href="challenge.html" class="action-btn">继续诚信挑战 →</a>
+            <a href="post.html" class="action-btn secondary-btn">写下一封感谢信 →</a>
+        </section>
+
+    </main>
+
+    <footer class="profile-footer">
+        <p>诚信是一颗种子，成长是一场温暖的旅程。</p>
+        <a href="index.html">返回诚信星球首页 ↑</a>
+    </footer>
+
+    <script src="js/profile.js"></script>
+
+</body>
+
+</html>

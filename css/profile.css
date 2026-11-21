@@ -1,0 +1,547 @@
+:root {
+    --cream: #faf8f0;
+    --cream-dark: #f1eee2;
+    --sage: #819b83;
+    --sage-dark: #526f58;
+    --sage-light: #e8eee4;
+    --gold: #d6b875;
+    --text: #45564a;
+    --text-light: #879187;
+    --white: #ffffff;
+    --shadow: 0 8px 28px rgba(75, 100, 76, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* 顶部导航 */
+
+.profile-navbar {
+    height: 72px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid #eeeee5;
+}
+
+.back-home {
+    color: var(--sage-dark);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    color: var(--gold);
+}
+
+.nav-logo {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--sage-dark);
+}
+
+.nav-label {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* 页面标题 */
+
+.profile-header {
+    text-align: center;
+    padding: 65px 20px 45px;
+}
+
+.english-title {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.profile-header h1 {
+    font-size: 32px;
+    margin: 15px 0 12px;
+    color: var(--sage-dark);
+    font-weight: 600;
+}
+
+.profile-header p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+/* 主体 */
+
+.profile-main {
+    width: 84%;
+    max-width: 1100px;
+    margin: 0 auto 70px;
+}
+
+/* 欢迎卡片 */
+
+.welcome-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 45px;
+    background: linear-gradient(120deg, #e8eee4, #f6f1df);
+    border-radius: 20px;
+    margin-bottom: 55px;
+    box-shadow: var(--shadow);
+}
+
+.welcome-tag,
+.message-tag {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.welcome-card h2 {
+    color: var(--sage-dark);
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.welcome-card p {
+    color: #778579;
+    font-size: 14px;
+}
+
+.welcome-decoration {
+    font-size: 70px;
+    opacity: 0.85;
+    padding: 0 20px;
+}
+
+/* 分区标题 */
+
+.section-block {
+    margin-bottom: 55px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.section-heading span {
+    color: var(--gold);
+    font-size: 22px;
+}
+
+.section-heading h2 {
+    color: var(--sage-dark);
+    font-size: 21px;
+    font-weight: 600;
+}
+
+/* 数据统计 */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.stat-card {
+    text-align: center;
+    background: var(--white);
+    padding: 28px 15px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.stat-number {
+    color: var(--sage-dark);
+    font-size: 32px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.stat-title {
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.stat-card p {
+    color: var(--text-light);
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+/* 荣誉徽章 */
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.badge-card {
+    background: var(--white);
+    border: 1px solid #eeeeE5;
+    border-radius: 16px;
+    text-align: center;
+    padding: 28px 12px;
+    opacity: 0.55;
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+
+.badge-card.unlocked {
+    opacity: 1;
+    filter: grayscale(0);
+    border-color: #dfd0a6;
+    background: #fffdf6;
+}
+
+.badge-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.badge-card h3 {
+    font-size: 15px;
+    color: var(--sage-dark);
+    margin-bottom: 5px;
+}
+
+.badge-card p {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.badge-status {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    background: #eeeeea;
+    color: #92988e;
+    font-size: 11px;
+}
+
+.badge-card.unlocked .badge-status {
+    background: #e8eee4;
+    color: var(--sage-dark);
+}
+
+/* 成长寄语 */
+
+.message-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #f4f0e2;
+    border-radius: 18px;
+    padding: 30px 35px;
+    margin-bottom: 55px;
+}
+
+.message-icon {
+    font-size: 48px;
+}
+
+.message-card h2 {
+    color: var(--sage-dark);
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.message-card p {
+    color: #788477;
+    font-size: 14px;
+}
+
+/* 成长记录 */
+
+.record-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 25px 30px;
+    box-shadow: var(--shadow);
+}
+
+.empty-record {
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.empty-record span {
+    font-size: 35px;
+}
+
+.empty-record p {
+    color: var(--sage-dark);
+    font-size: 15px;
+    margin: 10px 0 5px;
+}
+
+.empty-record small {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.record-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 0;
+    border-bottom: 1px solid #eeeeea;
+}
+
+.record-item:last-child {
+    border-bottom: none;
+}
+
+.record-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--sage-light);
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.record-content {
+    flex: 1;
+}
+
+.record-content h3 {
+    font-size: 14px;
+    color: var(--sage-dark);
+}
+
+.record-content p {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.record-date {
+    font-size: 11px;
+    color: #a4aaa1;
+}
+
+/* 操作按钮 */
+
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 50px 0;
+}
+
+.action-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--sage);
+    color: white;
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background: var(--sage-dark);
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    background: #d5bd83;
+}
+
+.secondary-btn:hover {
+    background: #b99b5b;
+}
+
+/* 页脚 */
+
+.profile-footer {
+    background: #edf0e8;
+    text-align: center;
+    padding: 30px 15px;
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+.profile-footer a {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--sage-dark);
+    text-decoration: none;
+}
+
+/* 平板 */
+
+@media (max-width: 850px) {
+    .profile-main {
+        width: 90%;
+    }
+
+    .stats-grid,
+    .badge-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 手机 */
+
+@media (max-width: 550px) {
+    .profile-navbar {
+        height: auto;
+        min-height: 65px;
+        padding: 15px 5%;
+        gap: 8px;
+    }
+
+    .nav-logo {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .nav-label,
+    .back-home {
+        font-size: 11px;
+    }
+
+    .profile-header {
+        padding: 45px 18px 35px;
+    }
+
+    .profile-header h1 {
+        font-size: 23px;
+    }
+
+    .profile-header p {
+        font-size: 12px;
+    }
+
+    .profile-main {
+        width: 90%;
+    }
+
+    .welcome-card {
+        padding: 25px 20px;
+    }
+
+    .welcome-card h2 {
+        font-size: 18px;
+    }
+
+    .welcome-card p {
+        font-size: 12px;
+    }
+
+    .welcome-decoration {
+        font-size: 45px;
+        padding: 0;
+    }
+
+    .stats-grid,
+    .badge-grid {
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 22px 8px;
+    }
+
+    .stat-number {
+        font-size: 27px;
+    }
+
+    .stat-title {
+        font-size: 13px;
+    }
+
+    .badge-card {
+        padding: 22px 8px;
+    }
+
+    .badge-card h3 {
+        font-size: 13px;
+    }
+
+    .badge-card p {
+        font-size: 11px;
+    }
+
+    .message-card {
+        padding: 23px 18px;
+        gap: 14px;
+    }
+
+    .message-icon {
+        font-size: 35px;
+    }
+
+    .message-card h2 {
+        font-size: 17px;
+    }
+
+    .message-card p {
+        font-size: 12px;
+    }
+
+    .record-card {
+        padding: 18px;
+    }
+
+    .record-date {
+        font-size: 10px;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .action-btn {
+        width: 85%;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

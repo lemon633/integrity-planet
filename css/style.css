@@ -1,0 +1,873 @@
+/* =========================
+   1. 全局设置
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background: #f8f7ed;
+    color: #526c59;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+/* =========================
+   2. 顶部导航
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 76px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.88);
+    position: relative;
+    z-index: 20;
+    box-shadow: 0 3px 20px rgba(100, 130, 100, 0.06);
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #668c70;
+}
+
+.logo-icon {
+    color: #e5bd68;
+    font-size: 27px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 38px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #7b8d7d;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #75a67c;
+}
+
+.nav-tag {
+    background: #f0f5e9;
+    color: #759277;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+}
+
+/* =========================
+   3. 欢迎区域
+========================= */
+
+.hero {
+    min-height: 500px;
+    padding: 85px 10% 60px;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 50% 100%,
+            #e0efd9 0%,
+            #eaf2e4 35%,
+            #e4f0f1 75%,
+            #d9ebf1 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+    content: "☁";
+    position: absolute;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.65);
+    animation: cloudMove 18s ease-in-out infinite alternate;
+}
+
+.hero::before {
+    left: 8%;
+    top: 80px;
+}
+
+.hero::after {
+    right: 10%;
+    top: 170px;
+    animation-delay: -8s;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-tag {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #91a991;
+}
+
+.hero h1 {
+    margin-top: 22px;
+    font-size: clamp(42px, 6vw, 66px);
+    line-height: 1.35;
+    color: #56795f;
+    letter-spacing: 5px;
+}
+
+.hero h1 span {
+    color: #d1a75d;
+}
+
+.hero-subtitle {
+    margin-top: 18px;
+    font-size: 19px;
+    color: #708b75;
+    letter-spacing: 3px;
+}
+
+.hero-description {
+    margin-top: 15px;
+    color: #8a9d8c;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.explore-btn {
+    margin-top: 30px;
+    padding: 15px 32px;
+    border-radius: 40px;
+    background: #80aa83;
+    color: white;
+    font-size: 15px;
+    box-shadow: 0 8px 20px rgba(105, 155, 110, 0.25);
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    transform: translateY(-4px);
+    background: #6c9b73;
+    box-shadow: 0 12px 25px rgba(105, 155, 110, 0.3);
+}
+
+.explore-btn span {
+    margin-left: 12px;
+}
+
+/* =========================
+   4. 岛屿标题
+========================= */
+
+.island-section {
+    padding: 75px 5% 45px;
+    text-align: center;
+    background: #f8f7ed;
+}
+
+.island-heading span {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #b3a67d;
+}
+
+.island-heading h2 {
+    margin-top: 15px;
+    font-size: 30px;
+    color: #64816a;
+    letter-spacing: 3px;
+}
+
+.island-heading p {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #9ba898;
+}
+
+/* =========================
+   5. 岛屿主体
+========================= */
+
+.island {
+    width: min(100%, 1050px);
+    height: 560px;
+    margin: 40px auto 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 35px;
+    background: linear-gradient(180deg,
+            #d9edf1 0%,
+            #e8f1e8 72%,
+            #e4efdb 100%);
+}
+
+/* 云朵 */
+
+.cloud {
+    position: absolute;
+    color: white;
+    font-size: 75px;
+    opacity: 0.8;
+    animation: cloudMove 12s ease-in-out infinite alternate;
+    z-index: 2;
+}
+
+.cloud-one {
+    top: 60px;
+    left: 8%;
+}
+
+.cloud-two {
+    top: 130px;
+    right: 8%;
+    font-size: 95px;
+    animation-delay: -5s;
+}
+
+.cloud-three {
+    top: 20px;
+    left: 48%;
+    font-size: 50px;
+    animation-delay: -3s;
+}
+
+/* 星星 */
+
+.star {
+    position: absolute;
+    color: #e8c879;
+    z-index: 3;
+    animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+.star-one {
+    top: 70px;
+    left: 30%;
+    font-size: 25px;
+}
+
+.star-two {
+    top: 160px;
+    right: 24%;
+    font-size: 30px;
+    animation-delay: 0.5s;
+}
+
+.star-three {
+    top: 40px;
+    right: 37%;
+    font-size: 20px;
+    animation-delay: 1s;
+}
+
+.star-four {
+    top: 220px;
+    left: 15%;
+    font-size: 25px;
+    animation-delay: 0.8s;
+}
+
+.star-five {
+    top: 110px;
+    right: 10%;
+    font-size: 18px;
+}
+
+/* 岛屿地面 */
+
+.island-base {
+    position: absolute;
+    width: 86%;
+    height: 410px;
+    left: 7%;
+    bottom: -45px;
+    border-radius: 48% 48% 30% 30%;
+    background: #a9cf9d;
+    box-shadow: inset 0 18px 30px rgba(255, 255, 255, 0.25);
+}
+
+/* 后方山丘 */
+
+.hill {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hill-back {
+    width: 65%;
+    height: 200px;
+    top: -65px;
+    left: 18%;
+    background: #b9d8a9;
+}
+
+.hill-left {
+    width: 65%;
+    height: 230px;
+    top: 45px;
+    left: -22%;
+    background: #94c58e;
+}
+
+.hill-right {
+    width: 65%;
+    height: 230px;
+    top: 35px;
+    right: -20%;
+    background: #9bc991;
+}
+
+/* 小湖 */
+
+.lake {
+    position: absolute;
+    width: 33%;
+    height: 75px;
+    left: 34%;
+    bottom: 50px;
+    background: #a9d9df;
+    border-radius: 50%;
+    transform: rotate(-8deg);
+    box-shadow: inset 0 5px 15px rgba(255, 255, 255, 0.6);
+}
+
+/* 小路 */
+
+.island-path {
+    position: absolute;
+    width: 55%;
+    height: 115px;
+    left: 22%;
+    bottom: 10px;
+    border-radius: 50%;
+    background: #e8dbb8;
+    transform: rotate(-8deg);
+    opacity: 0.8;
+}
+
+/* 花朵 */
+
+.flower {
+    position: absolute;
+    z-index: 4;
+    font-size: 25px;
+    animation: flowerSway 3s ease-in-out infinite alternate;
+}
+
+.flower-one {
+    left: 8%;
+    top: 42%;
+}
+
+.flower-two {
+    left: 25%;
+    bottom: 22%;
+}
+
+.flower-three {
+    right: 12%;
+    top: 38%;
+}
+
+.flower-four {
+    right: 28%;
+    bottom: 17%;
+}
+
+.flower-five {
+    left: 48%;
+    top: 28%;
+}
+
+/* =========================
+   6. 四个场景入口
+========================= */
+
+.place {
+    position: absolute;
+    z-index: 8;
+    width: 160px;
+    min-height: 145px;
+    background: rgba(255, 255, 255, 0.73);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    box-shadow: 0 8px 25px rgba(86, 125, 83, 0.12);
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.place:hover {
+    transform: translateY(-12px) scale(1.06);
+    box-shadow: 0 15px 30px rgba(86, 125, 83, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.place-emoji {
+    font-size: 48px;
+}
+
+.place-name {
+    color: #58765d;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.place-desc {
+    color: #91a18e;
+    font-size: 11px;
+}
+
+/* 四个入口的位置 */
+
+.tree-place {
+    top: 40px;
+    left: 12%;
+}
+
+.post-place {
+    top: 35px;
+    right: 12%;
+}
+
+.challenge-place {
+    top: 215px;
+    left: 29%;
+}
+
+.star-place {
+    top: 210px;
+    right: 25%;
+}
+
+/* =========================
+   7. 岛屿提示与页脚
+========================= */
+
+.island-tip {
+    margin: 28px auto 0;
+    font-size: 13px;
+    color: #91a38d;
+}
+
+.island-tip span {
+    color: #d3b46c;
+    padding: 0 10px;
+}
+
+footer {
+    padding: 35px 20px;
+    text-align: center;
+    background: #eaf0df;
+    color: #769077;
+}
+
+footer p {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+footer span {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #9baa94;
+}
+
+/* =========================
+   8. 提示框
+========================= */
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%, 30px);
+    background: rgba(80, 111, 83, 0.95);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 13px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* =========================
+   9. 动画
+========================= */
+
+@keyframes cloudMove {
+    from {
+        transform: translateX(-10px);
+    }
+
+    to {
+        transform: translateX(25px);
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes flowerSway {
+    from {
+        transform: rotate(-5deg);
+    }
+
+    to {
+        transform: rotate(5deg);
+    }
+}
+
+/* =========================
+   10. 手机端适配
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .nav-tag {
+        display: none;
+    }
+
+    .hero {
+        padding: 65px 5%;
+        min-height: 440px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .island-section {
+        padding: 55px 3%;
+    }
+
+    .island-heading h2 {
+        font-size: 23px;
+    }
+
+    .island {
+        height: 480px;
+    }
+
+    .island-base {
+        width: 96%;
+        left: 2%;
+        height: 350px;
+    }
+
+    .place {
+        width: 125px;
+        min-height: 120px;
+        padding: 8px 5px;
+    }
+
+    .place-emoji {
+        font-size: 35px;
+    }
+
+    .place-name {
+        font-size: 13px;
+    }
+
+    .place-desc {
+        font-size: 10px;
+    }
+
+    .tree-place {
+        left: 2%;
+        top: 45px;
+    }
+
+    .post-place {
+        right: 2%;
+        top: 45px;
+    }
+
+    .challenge-place {
+        left: 3%;
+        top: 200px;
+    }
+
+    .star-place {
+        right: 3%;
+        top: 200px;
+    }
+}
+
+/* 尊重系统的减少动态效果设置 */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+/* =================================
+   11. 原创童话岛屿背景升级
+================================= */
+
+/* 岛屿背景图片 */
+.island {
+    width: min(100%, 1200px);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 40px auto 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+
+    background-image: url("../assets/images/island.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 15px 45px rgba(86, 125, 83, 0.13);
+}
+
+/* 取消原来 CSS 绘制的岛屿地形 */
+.island-base {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* 隐藏旧版岛屿装饰 */
+.hill,
+.lake,
+.island-path,
+.flower {
+    display: none;
+}
+
+/* 原有云朵和星星继续保留 */
+.cloud,
+.star {
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* =================================
+   12. 四个场景入口重新定位
+================================= */
+
+.place {
+    position: absolute;
+    z-index: 8;
+
+    width: 150px;
+    min-height: 105px;
+
+    padding: 10px 8px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 8px 25px rgba(65, 90, 65, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    transition: all 0.35s ease;
+}
+
+.place:hover {
+    transform: translateY(-10px) scale(1.07);
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 15px 30px rgba(65, 90, 65, 0.23);
+}
+
+.place-emoji {
+    font-size: 38px;
+}
+
+.place-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #54775c;
+}
+
+.place-desc {
+    font-size: 11px;
+    color: #829780;
+}
+
+/* 诚信之树：左侧大树附近 */
+.tree-place {
+    top: 34%;
+    left: 17%;
+}
+
+/* 感恩邮局：右侧小屋附近 */
+.post-place {
+    top: 39%;
+    right: 7%;
+}
+
+/* 诚信挑战站：中央亭子附近 */
+.challenge-place {
+    top: 65%;
+    left: 40%;
+}
+
+/* 成长星空：上方观星台附近 */
+.star-place {
+    top: 10%;
+    left: 51%;
+}
+
+/* =================================
+   13. 手机端适配
+================================= */
+
+@media (max-width: 700px) {
+
+    .island {
+        aspect-ratio: 4 / 5;
+        border-radius: 20px;
+        background-position: center;
+    }
+
+    .place {
+        width: 112px;
+        min-height: 90px;
+        padding: 7px 4px;
+    }
+
+    .place-emoji {
+        font-size: 29px;
+    }
+
+    .place-name {
+        font-size: 12px;
+    }
+
+    .place-desc {
+        font-size: 9px;
+    }
+
+    .tree-place {
+        top: 34%;
+        left: 2%;
+    }
+
+    .post-place {
+        top: 39%;
+        right: 2%;
+    }
+
+    .challenge-place {
+        top: 68%;
+        left: 3%;
+    }
+
+    .star-place {
+        top: 10%;
+        left: 48%;
+    }
+
+}
+
+/* 岛屿建筑入口链接 */
+a.place {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a.place:visited {
+    color: inherit;
+}
+
+a.place:focus-visible {
+    outline: 3px solid #d6b875;
+    outline-offset: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.explore-btn {
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}

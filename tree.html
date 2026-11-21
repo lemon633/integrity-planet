@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>诚信之树 · HEART ISLAND</title>
+    <link rel="stylesheet" href="css/tree.css">
+</head>
+
+<body>
+
+    <!-- 顶部导航 -->
+    <header class="tree-navbar">
+        <a href="index.html" class="back-home">← 返回诚信星球</a>
+        <div class="nav-logo">✦ HEART ISLAND</div>
+        <div class="nav-label">诚信之树</div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="tree-header">
+        <span class="english-title">THE TREE OF INTEGRITY</span>
+        <h1>让诚信生根发芽</h1>
+        <p>每一次守信，都是成长的一部分。</p>
+    </section>
+
+    <!-- 主体区域 -->
+    <main class="tree-main">
+
+        <!-- 左侧：诚信之树 -->
+        <section class="tree-visual">
+
+            <div class="tree-glow"></div>
+
+            <div class="tree-art">
+                <div class="tree-crown">🌳</div>
+                <div class="tree-ground"></div>
+                <div class="tree-decoration decoration-one">✦</div>
+                <div class="tree-decoration decoration-two">✧</div>
+                <div class="tree-decoration decoration-three">✦</div>
+                <div class="tree-decoration decoration-four">🌼</div>
+                <div class="tree-decoration decoration-five">🦋</div>
+
+                <!-- 成长叶片 -->
+                <div class="leaf-container" id="leafContainer"></div>
+            </div>
+
+            <div class="tree-caption">
+                <h2>诚信之树</h2>
+                <p>用真诚浇灌，让美好慢慢生长</p>
+            </div>
+
+            <div class="growth-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalLeaves">0</span>
+                    <span class="stat-label">累计成长叶片</span>
+                </div>
+
+                <div class="stat-divider"></div>
+
+                <div class="stat-item">
+                    <span class="stat-number" id="totalDays">0</span>
+                    <span class="stat-label">累计守信天数</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 右侧：每日任务 -->
+        <section class="task-panel">
+
+            <div class="task-heading">
+                <span>✧ TODAY'S MISSION ✧</span>
+                <h2>今日诚信小任务</h2>
+                <p>从身边的小事开始，做一个诚实守信的人。</p>
+            </div>
+
+            <div class="date-card">
+                <span>今日日期</span>
+                <strong id="todayDate">----</strong>
+            </div>
+
+            <div class="mission-card">
+
+                <div class="mission-icon">🌱</div>
+
+                <span class="mission-tag">DAILY CHALLENGE</span>
+
+                <h3 id="taskTitle">今日任务</h3>
+
+                <p id="taskDescription">
+                    正在为你准备今日任务……
+                </p>
+
+                <div class="mission-reminder">
+                    <span>✦</span>
+                    诚信不是口号，而是每一次真实的行动。
+                </div>
+
+                <button class="complete-btn" id="completeBtn">
+                    我已完成今日任务
+                    <span>→</span>
+                </button>
+
+                <p class="complete-hint" id="completeHint">
+                    完成任务，让诚信之树长出一片新叶子。
+                </p>
+
+            </div>
+
+            <!-- 成长记录 -->
+            <div class="record-card">
+                <div class="record-icon">🌟</div>
+                <div>
+                    <h3>我的成长记录</h3>
+                    <p id="recordText">每一次守信，都值得被记录。</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- 底部 -->
+    <footer class="tree-footer">
+        <p>一言一行皆诚信，一点一滴共成长。</p>
+        <a href="index.html">返回诚信星球首页 →</a>
+    </footer>
+
+    <!-- 完成任务提示 -->
+    <div class="success-toast" id="successToast">
+        <span>🌟</span>
+        <strong>太棒了！诚信之树又长出一片新叶子！</strong>
+    </div>
+
+    <script src="js/tree.js"></script>
+
+</body>
+
+</html>
